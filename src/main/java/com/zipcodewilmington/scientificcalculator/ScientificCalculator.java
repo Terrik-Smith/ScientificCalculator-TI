@@ -31,5 +31,24 @@ public class ScientificCalculator {
     public void subtract(double value) {
     display = display - value;
 }
-
+    public void multiply(double value) {
+    display = display * value;
+}
+    public void divide(double value) {
+    if (value == 0) {
+    error = true;
+    } else {
+    display = display / value;
+    }
+}
+    public void square() {
+    display = display * display;
+}
+    public void squareRoot() {
+    if (display < 0) {
+    error = true;
+    } else { 
+    display = Math.sqrt(display);
+        }
+    }
 }
