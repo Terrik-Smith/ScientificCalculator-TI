@@ -10,7 +10,7 @@ public class MainApplication {
 
     calculator.setDisplay(5);
 
-    calculator.square();
+    calculator.switchSign();
 
     Console.println("Result: %s", calculator.getDisplay());
 }

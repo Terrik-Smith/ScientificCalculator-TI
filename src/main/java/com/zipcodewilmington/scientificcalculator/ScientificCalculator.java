@@ -51,4 +51,17 @@ public class ScientificCalculator {
     display = Math.sqrt(display);
         }
     }
+    public void inverse() {
+        if (display == 0) {
+            error = true;
+        } else { 
+           display = 1 / display;
+        }
+    }
+    public void switchSign() {
+        display = -display;
+    }
+    public void power(double exponent) {
+    display = Math.pow(display, exponent);
+    }
 }
