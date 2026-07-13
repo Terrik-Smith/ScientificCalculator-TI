@@ -1,7 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
 public class ScientificCalculator {
-    
+  
     private double display;
     private double memory;
     private boolean error;
@@ -34,4 +34,18 @@ public class ScientificCalculator {
     public void subtract(double value) {
     display = display - value;
 }
+public void memoryAdd() {
+    memory += display;
 }
+public void memoryRecall() {
+    display = memory;
+}
+public void memoryClear() {
+    memory = 0;
+}
+public double getMemory() {
+    return memory;
+}
+}
+
+
