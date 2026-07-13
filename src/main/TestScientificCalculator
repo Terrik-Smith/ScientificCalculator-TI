@@ -37,7 +37,8 @@ public class TestScientificCalculator {
         ScientificCalculator calculator = new ScientificCalculator();
 
         calculator.setDisplay(5);
-        calculator.add(3);
+        calculator.tan();
+    
 
         assertEquals(8, calculator.getDisplay());
     }
