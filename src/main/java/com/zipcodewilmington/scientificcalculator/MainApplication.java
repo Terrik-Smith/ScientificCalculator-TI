@@ -5,6 +5,7 @@ package com.zipcodewilmington.scientificcalculator;
  */
 public class MainApplication {
     public static void main(String[] args) {
+<<<<<<< HEAD
     
         ScientificCalculator calculator = new ScientificCalculator();
 
@@ -15,4 +16,15 @@ public class MainApplication {
         Console.println("Result: %s", calculator.getDisplay());   
 
     }
+=======
+
+    ScientificCalculator calculator = new ScientificCalculator();
+
+    calculator.setDisplay(5);
+
+    calculator.switchSign();
+
+    Console.println("Result: %s", calculator.getDisplay());
+}
+>>>>>>> master
 }
