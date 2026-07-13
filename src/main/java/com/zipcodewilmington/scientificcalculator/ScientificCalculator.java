@@ -6,7 +6,7 @@ public class ScientificCalculator {
     private double memory;
     private boolean error;
     private String displayMode;
-    private String unitsMode;
+    private String unitsMode = "degrees";
 
    public ScientificCalculator() { 
    display = 0;
@@ -19,23 +19,20 @@ public class ScientificCalculator {
    public double getDisplay() {
     return display;
    }
+
    public void setDisplay(double value) {
     display = value;   }
    public void clear() {
     display = 0;
     error = false;
    }
+
    public void add(double value) {
     display = display + value;
    }
+
     public void subtract(double value) {
     display = display - value;
-}
-
-public void switchUnitsMode(String mode) {
-    if (mode.equalsIgnoreCase("degrees") || mode.equalsIgnoreCase("radians")) {
-        unitsMode = mode.toLowerCase();
-    }
 }
 
 public void sine() {
@@ -46,6 +43,10 @@ public void sine() {
     }
 }
 
+public String getUnitsMode() {
+    return unitsMode;
+}
+
 public void cosine() {
     if (unitsMode.equals("degrees")) {
         display = Math.cos(Math.toRadians(display));
@@ -53,6 +54,7 @@ public void cosine() {
         display = Math.cos(display);
     }
 }
+
 public void tangent() {
     if (unitsMode.equals("degrees")) {
         display = Math.tan(Math.toRadians(display));
@@ -68,18 +70,36 @@ public void tangent() {
         display = Math.asin(display);
     }
     }
+
     public void inverseCosine() {
     if (unitsMode.equals("degrees")) {
         display = Math.toDegrees(Math.acos(display));
     } else {
         display = Math.acos(display);
     }
-}public void inverseTangent() {
+}
+
+public void inverseTangent() {
     if (unitsMode.equals("degrees")) {
         display = Math.toDegrees(Math.atan(display));
     } else {
         display = Math.atan(display);
     }
     }
+
+public void switchUnitsMode() {
+    if (unitsMode.equals("degrees")) {
+        unitsMode = "radians";
+    } else {
+        unitsMode = "degrees";
+    }
 }
 
+public void switchUnitsMode(String mode) {
+    if (mode.equalsIgnoreCase("degrees")) {
+        unitsMode = "degrees";
+    } else if (mode.equalsIgnoreCase("radians")) {
+        unitsMode = "radians";
+    }
+}
+}
