@@ -1,0 +1,44 @@
+package com.zipcodewilmington.scientificcalculator;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class TestScientificCalculator {
+
+    @Test
+    void newCalculatorShouldStartAtZero() {
+        ScientificCalculator calculator = new ScientificCalculator();
+
+        assertEquals(0, calculator.getDisplay());
+    }
+
+    @Test
+    void setDisplayShouldChangeDisplay() {
+        ScientificCalculator calculator = new ScientificCalculator();
+
+        calculator.setDisplay(25);
+
+        assertEquals(25, calculator.getDisplay());
+    }
+
+    @Test
+    void clearShouldResetDisplayToZero() {
+        ScientificCalculator calculator = new ScientificCalculator();
+
+        calculator.setDisplay(25);
+        calculator.clear();
+
+        assertEquals(0, calculator.getDisplay());
+    }
+
+    @Test
+    void addShouldUpdateDisplay() {
+        ScientificCalculator calculator = new ScientificCalculator();
+
+        calculator.setDisplay(5);
+        calculator.add(3);
+
+        assertEquals(8, calculator.getDisplay());
+    }
+}
